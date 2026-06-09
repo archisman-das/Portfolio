@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page Not Found | Archisman Das</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <div class="noise"></div>
+    <div class="aurora aurora-1"></div>
+    <div class="aurora aurora-2"></div>
+
+    <header class="topbar">
+      <a class="brand" href="index.html">Archisman Das</a>
+      <nav class="nav">
+        <a href="education.html">Education</a>
+        <a href="projects.html">Projects</a>
+        <a href="skills.html">Skills</a>
+        <a href="research.html">Research</a>
+        <a href="achievements.html">Certifications</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero reveal">
+        <div>
+          <p class="eyebrow">404</p>
+          <h1>Page not found</h1>
+          <p class="lede">
+            The page you were looking for doesn’t exist or has moved. Use the links below to get
+            back to the portfolio.
+          </p>
+        </div>
+        <a class="btn secondary" href="index.html">Back home</a>
+      </section>
+
+      <section class="section reveal">
+        <div class="dashboard-grid">
+          <article class="panel accent resume-panel resume-feature resume-wide">
+            <div class="resume-topline">
+              <div>
+                <h3>Fallback destination</h3>
+                <div class="resume-meta"><span>Safe return</span><span>Portfolio home</span></div>
+              </div>
+              <div class="badge-strip">
+                <span>Home</span>
+                <span>Projects</span>
+                <span>Contact</span>
+              </div>
+            </div>
+            <p>This fallback page keeps the experience polished even when a URL is missing or mistyped.</p>
+          </article>
+
+          <article class="panel resume-panel">
+            <h3>Quick Links</h3>
+            <div class="contact-links">
+              <a href="index.html">Home</a>
+              <a href="projects.html">Projects</a>
+              <a href="achievements.html">Certifications</a>
+            </div>
+          </article>
+
+          <article class="panel resume-panel quote-panel">
+            <h3>Tip</h3>
+            <div class="resume-meta"><span>Deployed site</span><span>Static fallback</span></div>
+            <p class="quote-text">If you deploy this site on GitHub Pages or another static host, this 404 page will be shown automatically when a page is missing.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© <span id="year"></span> Archisman Das</p>
+      <p>404</p>
+    </footer>
+  </body>
+</html>
