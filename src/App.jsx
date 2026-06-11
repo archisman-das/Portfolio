@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { BrowserRouter, Link, NavLink, Outlet, Route, Routes, useLocation } from "react-router-dom";
+import { HashRouter, Link, NavLink, Outlet, Route, Routes, useLocation } from "react-router-dom";
 import {
   certificateBadges,
   certificates,
@@ -653,8 +653,8 @@ function AppRoutes() {
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <AppRoutes />
-    </BrowserRouter>
+    </HashRouter>
   );
 }

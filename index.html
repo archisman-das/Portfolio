@@ -18,9 +18,186 @@
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="./script.js"></script>
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx?v=20260609-2"></script>
+    <div class="noise"></div>
+    <div class="aurora aurora-1"></div>
+    <div class="aurora aurora-2"></div>
+
+    <header class="topbar">
+      <a class="brand" href="index.html">Archisman Das</a>
+      <nav class="nav">
+        <a class="nav-home" href="index.html">Home</a>
+        <a href="education.html">Education</a>
+        <a href="projects.html">Projects</a>
+        <a href="skills.html">Skills</a>
+        <a href="research.html">Research</a>
+        <a href="achievements.html">Certifications</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero hero-home reveal">
+        <div class="hero-copy">
+          <div class="hero-kicker-row">
+            <p class="eyebrow">AI / ML Engineer - Research + Product Focused</p>
+            <span class="hero-status">Open to full-time roles and research collaborations</span>
+          </div>
+          <div class="hero-actions">
+            <a class="btn primary" href="projects.html">View Projects</a>
+            <a class="btn secondary" href="contact.html">Contact Me</a>
+          </div>
+          <div class="hero-focus">
+            <div class="hero-focus-item">
+              <span class="hero-focus-label">Primary lanes</span>
+              <strong>Computer Vision, Medical AI, Applied Research</strong>
+            </div>
+            <div class="hero-focus-item">
+              <span class="hero-focus-label">Delivery style</span>
+              <strong>Readable code, clean demos, and recruiter-friendly execution</strong>
+            </div>
+          </div>
+          <div class="stats">
+            <div class="stat">
+              <span class="stat-value">CV / AI</span>
+              <span class="stat-label">Primary focus</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value">Applied AI</span>
+              <span class="stat-label">Projects &amp; demos</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value">Research</span>
+              <span class="stat-label">Paper reading</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value">Coding</span>
+              <span class="stat-label">HackerRank</span>
+            </div>
+          </div>
+          <div class="hero-strip">
+            <span>CNNs</span>
+            <span>Vision Transformers</span>
+            <span>Transfer Learning</span>
+            <span>Open Source</span>
+          </div>
+          <div class="hero-callout">
+            <div class="hero-callout-title">Current focus</div>
+            <p>
+              Medical image analysis, multimodal learning, research implementation, and building practical AI systems
+              with strong evaluation and usable interfaces.
+            </p>
+            <div class="hero-callout-tags">
+              <span>Healthcare AI</span>
+              <span>Product Demos</span>
+              <span>Research Internships</span>
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero-panel">
+          <div class="profile-card">
+            <div class="profile-card-ribbon">
+              <span class="profile-card-ribbon-dot"></span>
+              <span>Portfolio . Research . Industry</span>
+            </div>
+            <img
+              class="profile-photo"
+              src="assets/profile-photo.jpeg"
+              alt="Portrait of Archisman Das"
+            />
+            <div class="profile-badge">Open to opportunities</div>
+            <h2>Archisman Das</h2>
+            <p>Focused on applied modeling, concise research communication, and polished product execution.</p>
+            <ul class="meta-list">
+              <li>M.Tech CSE (AI-DS), Jadavpur University</li>
+              <li>AI, deep learning, medical imaging, and assistive learning systems</li>
+              <li>Public profile shows 3K followers and 500+ connections</li>
+            </ul>
+            <div class="profile-links">
+              <a href="https://www.linkedin.com/in/archisman-das-0a2409200/" target="_blank" rel="noreferrer">
+                <svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M6 9H3v12h3V9Zm-1.5-1.5A1.5 1.5 0 1 0 4.5 4a1.5 1.5 0 0 0 0 3.5ZM21 14.5V21h-3.1v-6c0-1.4-.6-2.4-2-2.4-1 0-1.6.7-1.9 1.4-.1.3-.1.7-.1 1.1v5.9H10.8s.04-9.5 0-10.5H14v1.5c.4-.8 1.3-1.8 3.1-1.8 2.3 0 3.9 1.5 3.9 4.8Z"/>
+                </svg>
+                LinkedIn
+              </a>
+              <a href="https://github.com/archisman-das" target="_blank" rel="noreferrer">
+                <svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 .5A11.5 11.5 0 0 0 8.4 22.9c.6.1.8-.3.8-.6v-2c-3.4.7-4.1-1.4-4.1-1.4-.6-1.5-1.5-1.9-1.5-1.9-1.2-.8.1-.8.1-.8 1.3.1 2 .4 2.5 1 .5 1 1.7 1.4 2.2 1.6.1-.8.5-1.4.9-1.8-2.7-.3-5.6-1.3-5.6-5.8 0-1.3.4-2.3 1.1-3.2-.1-.3-.5-1.5.1-3.2 0 0 .9-.3 3 .9a10.7 10.7 0 0 1 5.4 0c2.1-1.2 3-.9 3-.9.6 1.7.2 2.9.1 3.2.7.9 1.1 1.9 1.1 3.2 0 4.5-2.9 5.5-5.6 5.8.5.4 1 .1 1 1.9v2.8c0 .3.2.7.8.6A11.5 11.5 0 0 0 12 .5Z"/>
+                </svg>
+                GitHub
+              </a>
+              <a href="https://www.hackerrank.com/profile/archismandas" target="_blank" rel="noreferrer">
+                <svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M8 3.5 4.5 7 8 10.5 11.5 7 8 3.5Zm8 0L12.5 7 16 10.5 19.5 7 16 3.5ZM8 13.5 4.5 17 8 20.5 11.5 17 8 13.5Zm8 0L12.5 17 16 20.5 19.5 17 16 13.5Z"/>
+                </svg>
+                HackerRank
+              </a>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="section reveal">
+        <div class="about-line">
+          Applied AI, computer vision, and intelligent systems for research and industry.
+        </div>
+        <div class="about-grid about-polish-grid">
+          <article class="panel resume-panel accent about-copy">
+            <div class="resume-topline">
+              <div>
+                <h3>Profile Overview</h3>
+                <div class="resume-meta">
+                  <span>AI / ML</span>
+                  <span>Product</span>
+                  <span>Computer Vision</span>
+                </div>
+              </div>
+            </div>
+            <p>
+              M.Tech CSE (AI-DS) student with interests in Artificial Intelligence, Deep Learning, Computer Vision,
+              and applied system design.
+            </p>
+            <p>
+              Currently exploring learning-based approaches for medical image analysis and intelligent visual systems
+              using CNNs, Vision Transformers, and transfer learning techniques.
+            </p>
+            <p>
+              Seeking opportunities in AI engineering, research collaborations, and product-oriented roles that
+              value strong technical depth and practical execution.
+            </p>
+          </article>
+
+          <aside class="panel resume-panel about-side">
+            <h3>Key Strengths</h3>
+            <div class="resume-meta">
+              <span>Python</span>
+              <span>PyTorch</span>
+              <span>TensorFlow</span>
+              <span>OpenCV</span>
+              <span>Deployment</span>
+            </div>
+            <ul class="meta-list about-list">
+              <li>Model training, evaluation, and iteration across CNNs, ViTs, and transfer learning workflows</li>
+              <li>Data-centric deep learning, representation learning, and experiment-driven model optimization</li>
+              <li>Medical AI, plant disease detection, multimodal learning, and applied product implementation</li>
+              <li>Open-source exploration, paper reading, and practical prototype development</li>
+            </ul>
+            <div class="hero-strip about-strip">
+              <span>Medical AI</span>
+              <span>Product Thinking</span>
+              <span>Open Source</span>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 2026 Archisman Das</p>
+    </footer>
   </body>
 </html>
