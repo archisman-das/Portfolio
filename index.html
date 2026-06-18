@@ -19,57 +19,6 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
-    <script>
-      (() => {
-        const themeKey = "portfolio-theme";
-        const themeColor = document.querySelector('meta[name="theme-color"]');
-
-        const syncThemeControls = (theme) => {
-          const toggle = document.querySelector("[data-theme-toggle]");
-          const label = document.querySelector("[data-theme-label]");
-          if (toggle) {
-            toggle.setAttribute("aria-pressed", String(theme === "light"));
-          }
-          if (label) {
-            label.textContent = theme === "light" ? "Dark mode" : "Light mode";
-          }
-        };
-
-        const applyTheme = (theme) => {
-          const nextTheme = theme === "light" ? "light" : "dark";
-          document.documentElement.dataset.theme = nextTheme;
-          document.documentElement.style.colorScheme = nextTheme;
-          if (themeColor) {
-            themeColor.setAttribute("content", nextTheme === "light" ? "#f4f7ff" : "#070b14");
-          }
-          syncThemeControls(nextTheme);
-        };
-
-        window.__portfolioApplyTheme = applyTheme;
-        window.__portfolioToggleTheme = () => {
-          const currentTheme = document.documentElement.dataset.theme || "dark";
-          const nextTheme = currentTheme === "light" ? "dark" : "light";
-          try {
-            localStorage.setItem(themeKey, nextTheme);
-          } catch (error) {}
-          applyTheme(nextTheme);
-        };
-
-        let initialTheme = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
-        try {
-          const theme = localStorage.getItem("portfolio-theme");
-          if (theme === "light" || theme === "dark") {
-            initialTheme = theme;
-          }
-        } catch (error) {}
-
-        applyTheme(initialTheme);
-
-        window.addEventListener("DOMContentLoaded", () => {
-          syncThemeControls(document.documentElement.dataset.theme || "dark");
-        });
-      })();
-    </script>
     <script type="module" src="./script.js"></script>
   </head>
   <body>
@@ -79,21 +28,15 @@
 
     <header class="topbar">
       <a class="brand" href="index.html">Archisman Das</a>
-      <div class="topbar-actions">
-        <nav class="nav">
-          <a class="nav-home" href="index.html">Home</a>
-          <a href="education.html">Education</a>
-          <a href="projects.html">Projects</a>
-          <a href="skills.html">Skills</a>
-          <a href="research.html">Research</a>
-          <a href="achievements.html">Certifications</a>
-          <a href="contact.html">Contact</a>
-        </nav>
-        <button class="theme-toggle" type="button" aria-pressed="false" data-theme-toggle onclick="window.__portfolioToggleTheme && window.__portfolioToggleTheme()">
-          <span class="theme-toggle-dot" aria-hidden="true"></span>
-          <span data-theme-label>Light mode</span>
-        </button>
-      </div>
+      <nav class="nav">
+        <a class="nav-home" href="index.html">Home</a>
+        <a href="education.html">Education</a>
+        <a href="projects.html">Projects</a>
+        <a href="skills.html">Skills</a>
+        <a href="research.html">Research</a>
+        <a href="achievements.html">Certifications</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </header>
 
     <main>

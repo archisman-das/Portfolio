@@ -158,15 +158,6 @@ main,
   box-shadow: var(--shadow);
 }
 
-.topbar-actions {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin-left: auto;
-  justify-content: flex-end;
-}
-
 .brand {
   font-family: "Space Grotesk", sans-serif;
   font-weight: 700;
@@ -184,36 +175,6 @@ main,
   gap: 18px;
   color: var(--muted);
   font-size: 0.95rem;
-}
-
-.theme-toggle {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  min-height: 40px;
-  padding: 0 14px;
-  border-radius: 999px;
-  border: 1px solid var(--toggle-border);
-  background: var(--toggle-bg);
-  color: var(--text);
-  font: inherit;
-  font-size: 0.9rem;
-  cursor: pointer;
-  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease, box-shadow 180ms ease;
-}
-
-.theme-toggle:hover {
-  transform: translateY(-1px);
-  border-color: rgba(94, 234, 212, 0.24);
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
-}
-
-.theme-toggle-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
-  box-shadow: 0 0 0 5px rgba(94, 234, 212, 0.08);
 }
 
 .nav a:hover,
@@ -668,122 +629,6 @@ h1 {
   font-size: 0.78rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-}
-
-body.theme-light .topbar {
-  background: rgba(255, 255, 255, 0.88);
-}
-
-body.theme-light .hero-copy::after {
-  opacity: 0.6;
-}
-
-body.theme-light .hero-status {
-  color: #0f172a;
-  background: #ffffff;
-  border-color: rgba(47, 110, 232, 0.18);
-}
-
-body.theme-light .hero-status::before {
-  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.12);
-}
-
-body.theme-light .hero-copy,
-body.theme-light .hero-panel,
-body.theme-light .panel,
-body.theme-light .card,
-body.theme-light .contact-panel,
-body.theme-light .profile-card {
-  box-shadow: 0 18px 48px rgba(16, 32, 54, 0.1);
-}
-
-body.theme-light .hero-home .hero-copy {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(243, 248, 255, 0.94));
-  border-color: rgba(59, 130, 246, 0.16);
-}
-
-body.theme-light .hero-home .eyebrow {
-  color: #2f6ee8;
-}
-
-body.theme-light .hero-home .hero-copy p,
-body.theme-light .hero-home .hero-summary {
-  color: #20334f;
-}
-
-body.theme-light .brand {
-  background: linear-gradient(90deg, #102036 0%, #2f6ee8 48%, #0ea5e9 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-}
-
-body.theme-light .nav a.active::after {
-  background: linear-gradient(90deg, #2f6ee8, #0ea5e9);
-}
-
-body.theme-light .theme-toggle {
-  background: rgba(255, 255, 255, 0.94);
-}
-
-body.theme-light .hero-copy::before,
-body.theme-light .hero-panel::before {
-  opacity: 0.9;
-}
-
-body.theme-light .hero-focus-item {
-  background: #ffffff;
-  border-color: rgba(47, 110, 232, 0.2);
-  box-shadow: 0 14px 30px rgba(16, 32, 54, 0.08);
-}
-
-body.theme-light .hero-focus-label {
-  color: #1d4ed8;
-}
-
-body.theme-light .hero-focus-item strong {
-  color: #0f172a;
-  font-weight: 700;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.55);
-}
-
-body.theme-light .btn.primary {
-  color: #ffffff;
-  background: linear-gradient(135deg, #2f6ee8 0%, #0ea5e9 100%);
-  border-color: rgba(47, 110, 232, 0.28);
-}
-
-body.theme-light .btn.secondary {
-  color: #0f172a;
-  background: #ffffff;
-  border-color: rgba(96, 123, 168, 0.24);
-}
-
-body.theme-light .hero-callout {
-  border-color: rgba(59, 130, 246, 0.16);
-  background: linear-gradient(135deg, rgba(59, 130, 246, 0.08), rgba(14, 165, 233, 0.05), rgba(255, 255, 255, 0.8));
-}
-
-body.theme-light .hero-callout p {
-  color: #3f5270;
-}
-
-body.theme-light .hero-callout-tags span {
-  color: #15324f;
-}
-
-body.theme-light .hero-home .hero-actions .btn.primary {
-  color: #ffffff;
-  background: linear-gradient(135deg, #1d4ed8 0%, #0284c7 100%);
-}
-
-body.theme-light .hero-home .hero-actions .btn.secondary {
-  color: #16324f;
-  background: rgba(255, 255, 255, 0.98);
-  border-color: rgba(96, 123, 168, 0.24);
-}
-
-body.theme-light .hero-home .hero-actions .btn {
-  box-shadow: 0 10px 24px rgba(16, 32, 54, 0.08);
 }
 
 .profile-card-ribbon-dot {
