@@ -697,6 +697,20 @@ body.theme-light .profile-card {
   box-shadow: 0 18px 48px rgba(16, 32, 54, 0.1);
 }
 
+body.theme-light .hero-home .hero-copy {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(243, 248, 255, 0.94));
+  border-color: rgba(59, 130, 246, 0.16);
+}
+
+body.theme-light .hero-home .eyebrow {
+  color: #2f6ee8;
+}
+
+body.theme-light .hero-home .hero-copy p,
+body.theme-light .hero-home .hero-summary {
+  color: #20334f;
+}
+
 body.theme-light .brand {
   background: linear-gradient(90deg, #102036 0%, #2f6ee8 48%, #0ea5e9 100%);
   -webkit-background-clip: text;
@@ -752,6 +766,21 @@ body.theme-light .hero-callout p {
 
 body.theme-light .hero-callout-tags span {
   color: #15324f;
+}
+
+body.theme-light .hero-home .hero-actions .btn.primary {
+  color: #ffffff;
+  background: linear-gradient(135deg, #1d4ed8 0%, #0284c7 100%);
+}
+
+body.theme-light .hero-home .hero-actions .btn.secondary {
+  color: #16324f;
+  background: rgba(255, 255, 255, 0.98);
+  border-color: rgba(96, 123, 168, 0.24);
+}
+
+body.theme-light .hero-home .hero-actions .btn {
+  box-shadow: 0 10px 24px rgba(16, 32, 54, 0.08);
 }
 
 .profile-card-ribbon-dot {
