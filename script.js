@@ -3,6 +3,70 @@ if (yearEl) {
   yearEl.textContent = new Date().getFullYear();
 }
 
+const themeKey = "portfolio-theme";
+const themeMeta = document.querySelector('meta[name="theme-color"]');
+const themeToggle = document.querySelector("[data-theme-toggle]");
+const themeLabel = document.querySelector("[data-theme-label]");
+
+const safeStorage = {
+  get(key) {
+    try {
+      return window.localStorage.getItem(key);
+    } catch (error) {
+      return null;
+    }
+  },
+  set(key, value) {
+    try {
+      window.localStorage.setItem(key, value);
+      return true;
+    } catch (error) {
+      return false;
+    }
+  },
+};
+
+const setTheme = (theme) => {
+  const nextTheme = theme === "light" ? "light" : "dark";
+  document.documentElement.dataset.theme = nextTheme;
+  document.documentElement.style.colorScheme = nextTheme;
+
+  if (themeMeta) {
+    themeMeta.setAttribute("content", nextTheme === "light" ? "#f4f7ff" : "#070b14");
+  }
+
+  if (themeToggle) {
+    themeToggle.setAttribute("aria-pressed", String(nextTheme === "light"));
+  }
+
+  if (themeLabel) {
+    themeLabel.textContent = nextTheme === "light" ? "Dark mode" : "Light mode";
+  }
+
+  window.__portfolioTheme = nextTheme;
+};
+
+const savedTheme = safeStorage.get(themeKey);
+const initialTheme = savedTheme === "light" || savedTheme === "dark"
+  ? savedTheme
+  : (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+
+setTheme(initialTheme);
+
+window.__portfolioApplyTheme = setTheme;
+window.__portfolioToggleTheme = () => {
+  const currentTheme = document.documentElement.dataset.theme === "light" ? "light" : "dark";
+  const nextTheme = currentTheme === "light" ? "dark" : "light";
+  safeStorage.set(themeKey, nextTheme);
+  setTheme(nextTheme);
+};
+
+if (themeToggle) {
+  themeToggle.addEventListener("click", () => {
+    window.__portfolioToggleTheme();
+  });
+}
+
 requestAnimationFrame(() => {
   document.body.classList.add("page-ready");
 });
