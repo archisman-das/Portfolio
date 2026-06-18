@@ -679,7 +679,13 @@ body.theme-light .hero-copy::after {
 }
 
 body.theme-light .hero-status {
-  background: rgba(59, 130, 246, 0.08);
+  color: #16324f;
+  background: rgba(255, 255, 255, 0.95);
+  border-color: rgba(59, 130, 246, 0.22);
+}
+
+body.theme-light .hero-status::before {
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.12);
 }
 
 body.theme-light .hero-copy,
@@ -708,6 +714,44 @@ body.theme-light .theme-toggle {
 body.theme-light .hero-copy::before,
 body.theme-light .hero-panel::before {
   opacity: 0.9;
+}
+
+body.theme-light .hero-focus-item {
+  background: rgba(255, 255, 255, 0.96);
+  border-color: rgba(59, 130, 246, 0.16);
+}
+
+body.theme-light .hero-focus-label {
+  color: #2f6ee8;
+}
+
+body.theme-light .hero-focus-item strong {
+  color: #17304d;
+}
+
+body.theme-light .btn.primary {
+  color: #ffffff;
+  background: linear-gradient(135deg, #2f6ee8 0%, #0ea5e9 100%);
+  border-color: rgba(47, 110, 232, 0.28);
+}
+
+body.theme-light .btn.secondary {
+  color: #15324f;
+  background: rgba(255, 255, 255, 0.92);
+  border-color: rgba(96, 123, 168, 0.22);
+}
+
+body.theme-light .hero-callout {
+  border-color: rgba(59, 130, 246, 0.16);
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.08), rgba(14, 165, 233, 0.05), rgba(255, 255, 255, 0.8));
+}
+
+body.theme-light .hero-callout p {
+  color: #3f5270;
+}
+
+body.theme-light .hero-callout-tags span {
+  color: #15324f;
 }
 
 .profile-card-ribbon-dot {
