@@ -679,9 +679,9 @@ body.theme-light .hero-copy::after {
 }
 
 body.theme-light .hero-status {
-  color: #16324f;
-  background: rgba(255, 255, 255, 0.95);
-  border-color: rgba(59, 130, 246, 0.22);
+  color: #0f172a;
+  background: #ffffff;
+  border-color: rgba(47, 110, 232, 0.18);
 }
 
 body.theme-light .hero-status::before {
@@ -731,16 +731,19 @@ body.theme-light .hero-panel::before {
 }
 
 body.theme-light .hero-focus-item {
-  background: rgba(255, 255, 255, 0.96);
-  border-color: rgba(59, 130, 246, 0.16);
+  background: #ffffff;
+  border-color: rgba(47, 110, 232, 0.2);
+  box-shadow: 0 14px 30px rgba(16, 32, 54, 0.08);
 }
 
 body.theme-light .hero-focus-label {
-  color: #2f6ee8;
+  color: #1d4ed8;
 }
 
 body.theme-light .hero-focus-item strong {
-  color: #17304d;
+  color: #0f172a;
+  font-weight: 700;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.55);
 }
 
 body.theme-light .btn.primary {
@@ -750,9 +753,9 @@ body.theme-light .btn.primary {
 }
 
 body.theme-light .btn.secondary {
-  color: #15324f;
-  background: rgba(255, 255, 255, 0.92);
-  border-color: rgba(96, 123, 168, 0.22);
+  color: #0f172a;
+  background: #ffffff;
+  border-color: rgba(96, 123, 168, 0.24);
 }
 
 body.theme-light .hero-callout {
