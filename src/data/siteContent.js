@@ -74,6 +74,10 @@ export const projectCards = [
         label: "GitHub Repo",
         href: "https://github.com/archisman-das/Learning-Disorder-Intelligence",
       },
+      {
+        label: "Live Demo",
+        href: "https://learning-disorder-intelligence.onrender.com/",
+      },
     ],
   },
   {
