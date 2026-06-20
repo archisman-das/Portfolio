@@ -973,6 +973,14 @@ h1 {
   font-size: 0.92rem;
 }
 
+.card-links a.project-link-primary {
+  border-color: color-mix(in srgb, var(--accent) 44%, transparent);
+  background: linear-gradient(135deg, rgba(94, 234, 212, 0.16), rgba(139, 92, 246, 0.16));
+  color: #f8fbff;
+  font-weight: 700;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.18);
+}
+
 .card-links a:hover {
   border-color: color-mix(in srgb, var(--accent) 45%, transparent);
   transform: translateY(-1px);

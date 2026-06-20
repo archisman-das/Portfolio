@@ -77,6 +77,7 @@ export const projectCards = [
       {
         label: "Live Demo",
         href: "https://learning-disorder-intelligence.onrender.com/",
+        className: "project-link-primary",
       },
     ],
   },

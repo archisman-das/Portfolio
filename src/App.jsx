@@ -353,7 +353,13 @@ function ProjectsPage() {
                 </div>
                 <div className="card-links">
                   {featuredProject.links.map((link) => (
-                    <a key={link.label} href={link.href} target="_blank" rel="noreferrer">
+                    <a
+                      key={link.label}
+                      href={link.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className={link.className}
+                    >
                       {link.label}
                     </a>
                   ))}
@@ -385,7 +391,13 @@ function ProjectsPage() {
                 </div>
                 <div className="card-links">
                   {project.links.map((link) => (
-                    <a key={link.label} href={link.href} target="_blank" rel="noreferrer">
+                    <a
+                      key={link.label}
+                      href={link.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className={link.className}
+                    >
                       {link.label}
                     </a>
                   ))}
