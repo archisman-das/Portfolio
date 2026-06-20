@@ -1,4 +1,5 @@
 :root {
+  color-scheme: dark;
   --bg: #07101d;
   --bg-elevated: rgba(15, 24, 42, 0.84);
   --panel: rgba(14, 24, 44, 0.72);
@@ -13,6 +14,46 @@
   --radius: 24px;
   --radius-sm: 16px;
   --max: 1120px;
+  --body-top: #050816;
+  --body-mid: #081122;
+  --body-bottom: #060b17;
+  --body-glow-a: rgba(94, 234, 212, 0.18);
+  --body-glow-b: rgba(139, 92, 246, 0.2);
+  --body-glow-c: rgba(245, 158, 11, 0.16);
+  --body-glow-d: rgba(96, 165, 250, 0.12);
+  --surface: linear-gradient(180deg, rgba(16, 27, 50, 0.9), rgba(12, 20, 39, 0.78));
+  --surface-strong: linear-gradient(180deg, rgba(17, 27, 53, 0.96), rgba(12, 18, 33, 0.86));
+  --surface-soft: linear-gradient(180deg, rgba(18, 30, 56, 0.9), rgba(11, 17, 32, 0.8));
+  --surface-border: rgba(148, 163, 184, 0.2);
+  --surface-border-strong: rgba(94, 234, 212, 0.16);
+  --chip-bg: rgba(255, 255, 255, 0.03);
+  --chip-border: rgba(148, 163, 184, 0.16);
+  --toggle-bg: rgba(255, 255, 255, 0.03);
+  --toggle-border: rgba(148, 163, 184, 0.2);
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  --text: #102036;
+  --muted: #52617f;
+  --line: rgba(46, 71, 112, 0.14);
+  --shadow: 0 20px 50px rgba(16, 32, 54, 0.12);
+  --body-top: #f8fbff;
+  --body-mid: #eef4ff;
+  --body-bottom: #e9f0fb;
+  --body-glow-a: rgba(59, 130, 246, 0.1);
+  --body-glow-b: rgba(14, 165, 233, 0.12);
+  --body-glow-c: rgba(245, 158, 11, 0.08);
+  --body-glow-d: rgba(34, 197, 94, 0.08);
+  --surface: linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(241, 246, 255, 0.88));
+  --surface-strong: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(241, 246, 255, 0.92));
+  --surface-soft: linear-gradient(180deg, rgba(246, 250, 255, 0.96), rgba(233, 240, 250, 0.9));
+  --surface-border: rgba(96, 123, 168, 0.16);
+  --surface-border-strong: rgba(59, 130, 246, 0.18);
+  --chip-bg: rgba(255, 255, 255, 0.76);
+  --chip-border: rgba(96, 123, 168, 0.16);
+  --toggle-bg: rgba(255, 255, 255, 0.82);
+  --toggle-border: rgba(96, 123, 168, 0.18);
 }
 
 * {
@@ -27,11 +68,11 @@ body {
   margin: 0;
   min-height: 100vh;
   background:
-    radial-gradient(circle at top left, rgba(94, 234, 212, 0.18), transparent 26%),
-    radial-gradient(circle at top right, rgba(139, 92, 246, 0.2), transparent 28%),
-    radial-gradient(circle at 15% 85%, rgba(245, 158, 11, 0.16), transparent 24%),
-    radial-gradient(circle at 85% 78%, rgba(96, 165, 250, 0.12), transparent 22%),
-    linear-gradient(180deg, #050816 0%, #081122 48%, #060b17 100%);
+    radial-gradient(circle at top left, var(--body-glow-a), transparent 26%),
+    radial-gradient(circle at top right, var(--body-glow-b), transparent 28%),
+    radial-gradient(circle at 15% 85%, var(--body-glow-c), transparent 24%),
+    radial-gradient(circle at 85% 78%, var(--body-glow-d), transparent 22%),
+    linear-gradient(180deg, var(--body-top) 0%, var(--body-mid) 48%, var(--body-bottom) 100%);
   color: var(--text);
   font-family: "Inter", sans-serif;
   line-height: 1.6;
@@ -88,8 +129,8 @@ body::before {
   z-index: -2;
   pointer-events: none;
   background:
-    radial-gradient(circle at 50% 0%, rgba(245, 158, 11, 0.14), transparent 24%),
-    radial-gradient(circle at 100% 100%, rgba(34, 211, 238, 0.12), transparent 22%);
+    radial-gradient(circle at 50% 0%, var(--body-glow-c), transparent 24%),
+    radial-gradient(circle at 100% 100%, var(--body-glow-a), transparent 22%);
   opacity: 0.85;
 }
 
@@ -110,9 +151,7 @@ main,
   gap: 20px;
   padding: 14px 18px;
   margin-top: 16px;
-  background:
-    linear-gradient(135deg, rgba(10, 16, 33, 0.9), rgba(13, 20, 41, 0.7)),
-    rgba(6, 10, 20, 0.72);
+  background: var(--surface-strong);
   border: 1px solid var(--line);
   border-radius: 999px;
   backdrop-filter: blur(16px);
@@ -210,7 +249,7 @@ main {
 .panel,
 .card,
 .contact-panel {
-  background: linear-gradient(180deg, rgba(16, 27, 50, 0.9), rgba(12, 20, 39, 0.78));
+  background: var(--surface);
   border: 1px solid var(--line);
   box-shadow: var(--shadow);
   backdrop-filter: blur(16px);
@@ -221,7 +260,7 @@ main {
   overflow: hidden;
   padding: 40px;
   border-radius: var(--radius);
-  border: 1px solid rgba(94, 234, 212, 0.16);
+  border: 1px solid var(--surface-border-strong);
 }
 
 .hero-copy::before {
@@ -231,7 +270,7 @@ main {
   width: 320px;
   height: 320px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(94, 234, 212, 0.2), transparent 64%);
+  background: radial-gradient(circle, color-mix(in srgb, var(--accent) 20%, transparent), transparent 64%);
   filter: blur(10px);
   pointer-events: none;
   animation: glow-drift 14s ease-in-out infinite;
@@ -244,8 +283,8 @@ main {
   width: 160px;
   height: 160px;
   border-radius: 40px;
-  background: linear-gradient(135deg, rgba(139, 92, 246, 0.15), rgba(94, 234, 212, 0.1));
-  border: 1px solid rgba(139, 92, 246, 0.14);
+  background: linear-gradient(135deg, color-mix(in srgb, var(--accent-2) 15%, transparent), color-mix(in srgb, var(--accent) 10%, transparent));
+  border: 1px solid color-mix(in srgb, var(--accent-2) 14%, transparent);
   transform: rotate(12deg);
   pointer-events: none;
   animation: float-tilt 10s ease-in-out infinite;
@@ -277,8 +316,8 @@ main {
   min-height: 34px;
   padding: 0 12px;
   border-radius: 999px;
-  border: 1px solid rgba(94, 234, 212, 0.18);
-  background: rgba(94, 234, 212, 0.08);
+  border: 1px solid color-mix(in srgb, var(--accent) 18%, transparent);
+  background: color-mix(in srgb, var(--accent) 8%, transparent);
   color: #d7f8ff;
   font-size: 0.8rem;
   letter-spacing: 0.02em;
@@ -389,9 +428,8 @@ h1 {
 .hero-focus-item {
   padding: 16px 16px 15px;
   border-radius: 20px;
-  border: 1px solid rgba(148, 163, 184, 0.12);
-  background:
-    linear-gradient(180deg, rgba(11, 15, 28, 0.72), rgba(8, 12, 22, 0.58));
+  border: 1px solid var(--surface-border);
+  background: var(--surface);
 }
 
 .hero-focus-label {
@@ -435,7 +473,7 @@ h1 {
 
 .secondary {
   color: var(--muted);
-  background: rgba(255, 255, 255, 0.02);
+  background: var(--chip-bg);
 }
 
 .stats {
@@ -458,9 +496,9 @@ h1 {
   min-height: 34px;
   padding: 0 12px;
   border-radius: 999px;
-  border: 1px solid rgba(148, 163, 184, 0.16);
-  background: rgba(255, 255, 255, 0.03);
-  color: #d7f8ff;
+  border: 1px solid var(--chip-border);
+  background: var(--chip-bg);
+  color: var(--text);
   font-size: 0.82rem;
   letter-spacing: 0.03em;
 }
@@ -469,8 +507,8 @@ h1 {
   margin-top: 18px;
   padding: 16px 18px;
   border-radius: 20px;
-  border: 1px solid rgba(94, 234, 212, 0.14);
-  background: linear-gradient(135deg, rgba(94, 234, 212, 0.12), rgba(139, 92, 246, 0.1), rgba(245, 158, 11, 0.06));
+  border: 1px solid color-mix(in srgb, var(--accent) 14%, transparent);
+  background: linear-gradient(135deg, color-mix(in srgb, var(--accent) 10%, transparent), color-mix(in srgb, var(--accent-2) 8%, transparent), color-mix(in srgb, var(--accent-3) 5%, transparent));
 }
 
 .hero-callout-title {
@@ -483,7 +521,7 @@ h1 {
 
 .hero-callout p {
   margin: 8px 0 0;
-  color: #d8def1;
+  color: var(--muted);
   font-size: 0.95rem;
   line-height: 1.65;
 }
@@ -501,9 +539,9 @@ h1 {
   min-height: 30px;
   padding: 0 10px;
   border-radius: 999px;
-  border: 1px solid rgba(148, 163, 184, 0.15);
-  background: rgba(255, 255, 255, 0.03);
-  color: var(--muted);
+  border: 1px solid var(--chip-border);
+  background: var(--chip-bg);
+  color: var(--text);
   font-size: 0.78rem;
 }
 
@@ -532,17 +570,15 @@ h1 {
 .stat {
   padding: 14px;
   border-radius: 18px;
-  background:
-    linear-gradient(180deg, rgba(11, 15, 28, 0.65), rgba(8, 12, 22, 0.55));
-  border: 1px solid rgba(148, 163, 184, 0.11);
+  background: var(--surface);
+  border: 1px solid var(--surface-border);
   transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
 }
 
 .stat:hover {
   transform: translateY(-2px);
-  border-color: rgba(125, 211, 252, 0.22);
-  background:
-    linear-gradient(180deg, rgba(11, 15, 28, 0.72), rgba(8, 12, 22, 0.6));
+  border-color: color-mix(in srgb, var(--accent) 22%, transparent);
+  background: var(--surface);
 }
 
 .stat-value {
@@ -570,8 +606,8 @@ h1 {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at top left, rgba(94, 234, 212, 0.14), transparent 32%),
-    radial-gradient(circle at bottom right, rgba(139, 92, 246, 0.1), transparent 28%);
+    radial-gradient(circle at top left, color-mix(in srgb, var(--accent) 14%, transparent), transparent 32%),
+    radial-gradient(circle at bottom right, color-mix(in srgb, var(--accent-2) 10%, transparent), transparent 28%);
   pointer-events: none;
 }
 
@@ -579,8 +615,7 @@ h1 {
   width: 100%;
   padding: 28px;
   border-radius: var(--radius);
-  background:
-    linear-gradient(180deg, rgba(17, 27, 53, 0.96), rgba(12, 18, 33, 0.86));
+  background: var(--surface-strong);
   position: relative;
   z-index: 1;
 }
@@ -625,9 +660,9 @@ h1 {
   padding: 8px 12px;
   border-radius: 999px;
   font-size: 0.82rem;
-  color: #d8fff5;
-  background: linear-gradient(135deg, rgba(94, 234, 212, 0.14), rgba(139, 92, 246, 0.12));
-  border: 1px solid rgba(94, 234, 212, 0.2);
+  color: var(--text);
+  background: linear-gradient(135deg, color-mix(in srgb, var(--accent) 12%, transparent), color-mix(in srgb, var(--accent-2) 10%, transparent));
+  border: 1px solid color-mix(in srgb, var(--accent) 20%, transparent);
 }
 
 .profile-card h2 {
@@ -668,14 +703,14 @@ h1 {
   padding: 10px 14px;
   border-radius: 999px;
   border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--chip-bg);
   transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
 }
 
 .profile-links a:hover {
   transform: translateY(-2px);
-  border-color: rgba(94, 234, 212, 0.3);
-  background: rgba(94, 234, 212, 0.08);
+  border-color: color-mix(in srgb, var(--accent) 30%, transparent);
+  background: color-mix(in srgb, var(--accent) 8%, transparent);
 }
 
 .profile-links a:hover,
@@ -740,9 +775,9 @@ h1 {
   gap: 12px;
   min-height: 100%;
   background:
-    radial-gradient(circle at top right, rgba(139, 92, 246, 0.12), transparent 30%),
-    radial-gradient(circle at bottom left, rgba(94, 234, 212, 0.08), transparent 24%),
-    rgba(10, 14, 25, 0.82);
+    radial-gradient(circle at top right, color-mix(in srgb, var(--accent-2) 12%, transparent), transparent 30%),
+    radial-gradient(circle at bottom left, color-mix(in srgb, var(--accent) 8%, transparent), transparent 24%),
+    var(--body-bottom);
 }
 
 .about-list {
@@ -768,7 +803,7 @@ h1 {
 .panel:hover,
 .card:hover {
   transform: translateY(-3px);
-  border-color: rgba(125, 211, 252, 0.24);
+  border-color: color-mix(in srgb, var(--accent) 24%, transparent);
   box-shadow: 0 28px 90px rgba(0, 0, 0, 0.42);
 }
 
@@ -798,11 +833,11 @@ h1 {
 .project-story-feature {
   padding: 28px;
   border-radius: var(--radius);
-  border: 1px solid rgba(94, 234, 212, 0.18);
+  border: 1px solid color-mix(in srgb, var(--accent) 18%, transparent);
   background:
-    radial-gradient(circle at top right, rgba(94, 234, 212, 0.14), transparent 28%),
-    radial-gradient(circle at bottom left, rgba(139, 92, 246, 0.1), transparent 24%),
-    linear-gradient(180deg, rgba(11, 16, 29, 0.94), rgba(10, 14, 25, 0.86));
+    radial-gradient(circle at top right, color-mix(in srgb, var(--accent) 14%, transparent), transparent 28%),
+    radial-gradient(circle at bottom left, color-mix(in srgb, var(--accent-2) 10%, transparent), transparent 24%),
+    var(--surface);
 }
 
 .project-story-top {
@@ -829,8 +864,8 @@ h1 {
   min-width: 54px;
   min-height: 54px;
   border-radius: 18px;
-  border: 1px solid rgba(94, 234, 212, 0.18);
-  background: rgba(94, 234, 212, 0.08);
+  border: 1px solid color-mix(in srgb, var(--accent) 18%, transparent);
+  background: color-mix(in srgb, var(--accent) 8%, transparent);
   color: var(--accent);
   font-family: "Space Grotesk", sans-serif;
   font-size: 1.15rem;
@@ -877,9 +912,8 @@ h1 {
 }
 
 .project-editorial-grid .project-story {
-  background:
-    linear-gradient(180deg, rgba(18, 30, 56, 0.82), rgba(11, 15, 27, 0.74));
-  border: 1px solid rgba(148, 163, 184, 0.12);
+  background: var(--surface-soft);
+  border: 1px solid var(--surface-border);
 }
 
 .project-editorial-grid .project-story .project-story-number {
@@ -897,14 +931,13 @@ h1 {
 }
 
 .card {
-  background:
-    linear-gradient(180deg, rgba(18, 30, 56, 0.9), rgba(11, 17, 32, 0.8));
+  background: var(--surface-soft);
 }
 
 .card-tag {
   display: inline-block;
   margin-bottom: 18px;
-  color: #a78bfa;
+  color: var(--accent-2);
   font-size: 0.8rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -934,14 +967,22 @@ h1 {
   min-height: 40px;
   padding: 0 14px;
   border-radius: 999px;
-  border: 1px solid rgba(139, 92, 246, 0.24);
-  background: rgba(139, 92, 246, 0.08);
+  border: 1px solid color-mix(in srgb, var(--accent-2) 24%, transparent);
+  background: color-mix(in srgb, var(--accent-2) 8%, transparent);
   color: var(--text);
   font-size: 0.92rem;
 }
 
+.card-links a.project-link-primary {
+  border-color: color-mix(in srgb, var(--accent) 44%, transparent);
+  background: linear-gradient(135deg, rgba(94, 234, 212, 0.16), rgba(139, 92, 246, 0.16));
+  color: #f8fbff;
+  font-weight: 700;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.18);
+}
+
 .card-links a:hover {
-  border-color: rgba(125, 211, 252, 0.45);
+  border-color: color-mix(in srgb, var(--accent) 45%, transparent);
   transform: translateY(-1px);
 }
 
@@ -961,8 +1002,7 @@ h1 {
   grid-template-columns: 16px 1fr;
   gap: 16px;
   padding: 20px 22px;
-  background:
-    linear-gradient(180deg, rgba(17, 24, 39, 0.75), rgba(10, 14, 25, 0.72));
+  background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 20px;
   transition: transform 180ms ease, border-color 180ms ease;
@@ -970,7 +1010,7 @@ h1 {
 
 .timeline-item:hover {
   transform: translateY(-2px);
-  border-color: rgba(125, 211, 252, 0.24);
+  border-color: color-mix(in srgb, var(--accent) 24%, transparent);
 }
 
 .timeline-marker {
@@ -979,7 +1019,7 @@ h1 {
   margin-top: 6px;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--accent), var(--accent-2));
-  box-shadow: 0 0 0 6px rgba(94, 234, 212, 0.08);
+  box-shadow: 0 0 0 6px color-mix(in srgb, var(--accent) 8%, transparent);
 }
 
 .achievement-grid {
@@ -1004,8 +1044,7 @@ h1 {
 }
 
 .panel.accent {
-  background:
-    linear-gradient(180deg, rgba(17, 26, 48, 0.96), rgba(12, 18, 31, 0.82));
+  background: var(--surface-strong);
 }
 
 .resume-panel {
@@ -1019,10 +1058,10 @@ h1 {
 }
 
 .resume-feature {
-  border: 1px solid rgba(139, 92, 246, 0.3);
+  border: 1px solid color-mix(in srgb, var(--accent-2) 30%, transparent);
   background:
-    radial-gradient(circle at top right, rgba(139, 92, 246, 0.14), transparent 34%),
-    linear-gradient(180deg, rgba(9, 16, 29, 0.98), rgba(12, 18, 31, 0.88));
+    radial-gradient(circle at top right, color-mix(in srgb, var(--accent-2) 14%, transparent), transparent 34%),
+    var(--surface);
 }
 
 .education-timeline {
@@ -1040,7 +1079,7 @@ h1 {
   bottom: 12px;
   width: 2px;
   border-radius: 999px;
-  background: linear-gradient(180deg, rgba(125, 211, 252, 0.75), rgba(52, 211, 153, 0.18));
+  background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 75%, transparent), color-mix(in srgb, #34d399 18%, transparent));
 }
 
 .education-item {
@@ -1056,8 +1095,8 @@ h1 {
   height: 14px;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--accent), var(--accent-2));
-  box-shadow: 0 0 0 6px rgba(139, 92, 246, 0.08);
-  border: 2px solid rgba(7, 11, 20, 0.85);
+  box-shadow: 0 0 0 6px color-mix(in srgb, var(--accent-2) 8%, transparent);
+  border: 2px solid color-mix(in srgb, var(--body-bottom) 85%, transparent);
 }
 
 .education-feature {
@@ -1093,9 +1132,9 @@ h1 {
   min-height: 32px;
   padding: 0 12px;
   border-radius: 999px;
-  color: #d7f8ff;
-  border: 1px solid rgba(125, 211, 252, 0.22);
-  background: rgba(125, 211, 252, 0.1);
+  color: var(--text);
+  border: 1px solid color-mix(in srgb, var(--accent) 22%, transparent);
+  background: color-mix(in srgb, var(--accent) 10%, transparent);
   font-size: 0.82rem;
 }
 
@@ -1105,7 +1144,7 @@ h1 {
   height: 7px;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--accent), var(--accent-2));
-  box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.08);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent-3) 8%, transparent);
   flex: 0 0 auto;
 }
 
@@ -1121,8 +1160,8 @@ h1 {
   min-height: 28px;
   padding: 0 10px;
   border-radius: 999px;
-  border: 1px solid rgba(148, 163, 184, 0.16);
-  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--chip-border);
+  background: var(--chip-bg);
   color: var(--muted);
   font-size: 0.8rem;
   letter-spacing: 0.02em;
@@ -1130,8 +1169,8 @@ h1 {
 
 .quote-panel {
   background:
-    linear-gradient(180deg, rgba(17, 24, 39, 0.9), rgba(9, 13, 22, 0.88)),
-    radial-gradient(circle at bottom right, rgba(94, 234, 212, 0.12), transparent 30%);
+    var(--surface),
+    radial-gradient(circle at bottom right, color-mix(in srgb, var(--accent) 12%, transparent), transparent 30%);
 }
 
 .certificate-card {
@@ -1143,7 +1182,7 @@ h1 {
 
 .certificate-card-alt {
   background:
-    radial-gradient(circle at top right, rgba(139, 92, 246, 0.1), transparent 30%),
+    radial-gradient(circle at top right, color-mix(in srgb, var(--accent-2) 10%, transparent), transparent 30%),
     var(--panel);
 }
 
@@ -1154,8 +1193,8 @@ h1 {
   min-height: 100%;
   padding: 16px;
   border-radius: 22px;
-  border: 1px solid rgba(125, 211, 252, 0.16);
-  background: linear-gradient(180deg, rgba(10, 14, 25, 0.85), rgba(10, 14, 25, 0.55));
+  border: 1px solid color-mix(in srgb, var(--accent) 16%, transparent);
+  background: var(--surface);
 }
 
 .certificate-preview a {
@@ -1185,11 +1224,11 @@ h1 {
   min-height: 220px;
   padding: 22px;
   border-radius: 18px;
-  border: 1px solid rgba(94, 234, 212, 0.18);
+  border: 1px solid color-mix(in srgb, var(--accent) 18%, transparent);
   background:
-    radial-gradient(circle at top left, rgba(94, 234, 212, 0.14), transparent 28%),
-    radial-gradient(circle at bottom right, rgba(139, 92, 246, 0.12), transparent 28%),
-    rgba(7, 11, 20, 0.72);
+    radial-gradient(circle at top left, color-mix(in srgb, var(--accent) 14%, transparent), transparent 28%),
+    radial-gradient(circle at bottom right, color-mix(in srgb, var(--accent-2) 12%, transparent), transparent 28%),
+    color-mix(in srgb, var(--body-bottom) 72%, transparent);
 }
 
 .certificate-kicker {
@@ -1222,8 +1261,8 @@ h1 {
 
 .badge-panel {
   background:
-    linear-gradient(180deg, rgba(9, 13, 22, 0.96), rgba(12, 18, 31, 0.92)),
-    radial-gradient(circle at top left, rgba(94, 234, 212, 0.08), transparent 30%);
+    var(--surface),
+    radial-gradient(circle at top left, color-mix(in srgb, var(--accent) 8%, transparent), transparent 30%);
 }
 
 .badge-gallery {
@@ -1325,7 +1364,7 @@ h1 {
   padding: 0 12px 0 8px;
   border-radius: 999px;
   border: 1px solid rgba(148, 163, 184, 0.16);
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--chip-bg);
   color: var(--text);
   font-size: 0.9rem;
   letter-spacing: 0.01em;
@@ -1398,14 +1437,14 @@ h1 {
   border-radius: 999px;
   border: 1px solid var(--line);
   color: var(--muted);
-  background: rgba(255, 255, 255, 0.02);
+  background: var(--chip-bg);
   transition: transform 180ms ease, border-color 180ms ease, background 180ms ease, color 180ms ease;
 }
 
 .contact-links a:hover {
   transform: translateY(-2px);
-  border-color: rgba(94, 234, 212, 0.25);
-  background: rgba(94, 234, 212, 0.08);
+  border-color: color-mix(in srgb, var(--accent) 25%, transparent);
+  background: color-mix(in srgb, var(--accent) 8%, transparent);
 }
 
 .footer {
